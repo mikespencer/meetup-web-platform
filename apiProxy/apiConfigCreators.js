@@ -64,3 +64,9 @@ export function login(params) {
 	};
 }
 
+export function proGroups(params) {
+	return {
+		endpoint: `pro/${params.urlname}/groups`,
+		params
+	};
+}

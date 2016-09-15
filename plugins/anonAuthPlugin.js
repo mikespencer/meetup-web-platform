@@ -184,7 +184,8 @@ export const getAnonymousAccessToken$ = ({ ANONYMOUS_ACCESS_URL, oauth }, redire
  * translated API content
  */
 export const anonAuth$ = config => {
-	const redirect_uri = 'http://www.meetup.com/';  // required param set in oauth consumer config
+	//const redirect_uri = 'http://www.meetup.com/';  // required param set in oauth consumer config
+	const redirect_uri = 'https://admin.dev.meetup.com/admin/';  // required param set in oauth consumer config
 	const code$ = getAnonymousCode$(config, redirect_uri);
 	const token$ = getAnonymousAccessToken$(config, redirect_uri);
 
@@ -247,4 +248,3 @@ register.attributes = {
 	name: 'anonAuth',
 	version: '1.0.0',
 };
-
